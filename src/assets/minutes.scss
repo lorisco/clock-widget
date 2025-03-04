@@ -1,0 +1,180 @@
+/* Minutes Ring */
+$minute-height: 34px;
+
+.minute-ring {
+  position: absolute;
+  width: 720px;
+  height: 100%;
+  top: 0;
+  left: 0;
+
+  .minute {
+    background-color: grey;
+    border-radius: 5px;
+  }
+
+  /* Minutes lines position & style */
+
+  .minute-top, .minute-bottom, .minute-left, .minute-right {
+    justify-content: space-evenly;
+    position: absolute;
+    display: flex;
+  }
+
+  .minute-top, .minute-bottom {
+    flex-direction: row;
+    left: 10px;
+    width: 700px;
+  }
+
+  .minute-top {
+    top: 0;
+    align-items: flex-start;
+  }
+
+  .minute-bottom {
+    bottom: 0;
+    align-items: flex-end;
+    flex-direction: row-reverse;
+  }
+
+  .minute-left, .minute-right {
+    flex-direction: column;
+    top: 10px;
+    height: 700px;
+  }
+
+  .minute-right {
+    right: 0;
+    align-items: flex-end;
+  }
+
+  .minute-left {
+    left: 0;
+    flex-direction: column-reverse;
+  }
+
+  .minute-horizontal {
+    width: 6px;
+    height: $minute-height;
+  }
+
+  .minute-vertical {
+    width: $minute-height;
+    height: 6px;
+  }
+}
+
+/* Minutes lines transform (rotation and height) */
+
+.minute-top {
+  $rotation-initial: -40deg;
+  $increment: 5deg;
+  @for $i from 1 through 7 {
+    .minute-horizontal:nth-of-type(#{$i}) {
+      transform: rotate($rotation-initial + ($i - 1) * $increment);
+      height: 42px - $i
+    }
+  }
+
+  .minute-horizontal:nth-of-type(3),
+  .minute-horizontal:nth-of-type(8),
+  .minute-horizontal:nth-of-type(13),
+  {
+    height: 60px !important;
+    background-color: white !important;
+  }
+
+  $rotation-initial: 10deg;
+  $increment2: 5deg;
+  @for $i from 1 through 7 {
+    .minute-horizontal:nth-of-type(#{$i+8}) {
+      transform: rotate($rotation-initial + ($i - 1) * $increment2);
+      height: $minute-height + $i
+    }
+  }
+}
+
+.minute-bottom {
+  $rotation-initial: -40deg;
+  $increment: 5deg;
+  @for $i from 1 through 7 {
+    .minute-horizontal:nth-of-type(#{$i}) {
+      transform: rotate($rotation-initial + ($i - 1) * $increment);
+      height: 42px - $i
+    }
+  }
+
+  .minute-horizontal:nth-of-type(3),
+  .minute-horizontal:nth-of-type(8),
+  .minute-horizontal:nth-of-type(13),
+  {
+    height: 60px !important;
+    background-color: white !important;
+  }
+
+  $rotation-initial: 10deg;
+  $increment2: 5deg;
+  @for $i from 1 through 7 {
+    .minute-horizontal:nth-of-type(#{$i+8}) {
+      transform: rotate($rotation-initial + ($i - 1) * $increment2);
+      height: $minute-height + $i
+    }
+  }
+}
+
+.minute-left {
+  $rotation-initial: -35deg;
+  $increment: 5deg;
+  @for $i from 1 through 7 {
+    .minute-vertical:nth-of-type(#{$i}) {
+      transform: rotate($rotation-initial + ($i - 1) * $increment);
+      width: 42px - $i
+    }
+  }
+
+  .minute-vertical:nth-of-type(3),
+  .minute-vertical:nth-of-type(8),
+  .minute-vertical:nth-of-type(13),
+  {
+    width: 60px !important;
+    background-color: white !important;
+  }
+
+  $rotation-initial: 5deg;
+  $increment2: 5deg;
+  @for $i from 1 through 7 {
+    .minute-vertical:nth-of-type(#{$i+8}) {
+      transform: rotate($rotation-initial + ($i - 1) * $increment2);
+      width: $minute-height + $i
+    }
+  }
+}
+
+.minute-right {
+  $rotation-initial: -35deg;
+  $increment: 5deg;
+  @for $i from 1 through 7 {
+    .minute-vertical:nth-of-type(#{$i}) {
+      transform: rotate($rotation-initial + ($i - 1) * $increment);
+      width: 42px - $i
+    }
+  }
+
+  .minute-vertical:nth-of-type(3),
+  .minute-vertical:nth-of-type(8),
+  .minute-vertical:nth-of-type(13),
+  {
+    width: 60px !important;
+    background-color: white !important;
+  }
+
+  $rotation-initial: 5deg;
+  $increment2: 5deg;
+  @for $i from 1 through 7 {
+    .minute-vertical:nth-of-type(#{$i+8}) {
+      transform: rotate($rotation-initial + ($i - 1) * $increment2);
+      width: $minute-height + $i
+    }
+  }
+}
