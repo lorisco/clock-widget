@@ -7,6 +7,10 @@ Perfect for running on a raspberry pi with a HyperPixel display.
 
 ## Description
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2b5e67ed-8f37-4d01-ab69-86cde3719703/deploy-status)](https://app.netlify.com/sites/web-clock-widget/deploys)
+
+Live demo: https://web-clock-widget.netlify.app/
+
 This project is a clock widget implementation using React and modern web technologies. The clock mechanism is based on a JavaScript and CSS adaptation inspired by [this CodePen project](https://codepen.io/rupok/pen/QWZBqe).
 
 ## Setup
