@@ -2,6 +2,7 @@ import './App.css';
 import './assets/clock.scss';
 import './assets/minutes.scss';
 import {useEffect, useRef, useState} from "react";
+import ThemeToggle from './components/ThemeToggle';
 
 export default function ModernClock() {
   const [currentDate, setDate] = useState(new Date());
@@ -107,7 +108,8 @@ export default function ModernClock() {
 
   return (
     <>
-        <div className="clock hour-style-text hour-text-style-large hand-style-hollow minute-text-style-none minute-display-style-none minute-style-dot hour-display-style-quarters" id="utility-clock">
+      <ThemeToggle />
+      <div className="clock hour-style-text hour-text-style-large hand-style-hollow minute-text-style-none minute-display-style-none minute-style-dot hour-display-style-quarters" id="utility-clock">
           <div className="centre">
             <div className="dynamic"></div>
             <div className="expand round circle-1"></div>

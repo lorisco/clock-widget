@@ -1,3 +1,23 @@
+:root {
+  --body-background-color:  rgb(245, 245, 247);
+  --clock-face-main-minutes-color: white;
+  --clock-face-secondary-minutes-color: grey;
+  --clock-face-hands-color: white;
+  --clock-face-second-hand-color: #FA9F22;
+  --clock-face-text-color: white;
+  --clock-face-date-background-color: white;
+}
+
+.dark-theme {
+  --body-background-color: #2d2d2d;
+  --clock-face-main-minutes-color: #EA3323;
+  --clock-face-secondary-minutes-color: #540C06;
+  --clock-face-hands-color: #EA3323;
+  --clock-face-second-hand-color: #8C1A11;
+  --clock-face-text-color: #BB271A;
+  --clock-face-date-background-color: #540C06;
+}
+
 body {
   height: 100vh;
   display: flex;
@@ -5,8 +25,9 @@ body {
   justify-content: center;
   box-sizing: border-box;
   margin: 0;
-  background-color: rgb(245, 245, 247);
+  background-color: var(--body-background-color);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 #root {

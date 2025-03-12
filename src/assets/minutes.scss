@@ -9,7 +9,7 @@ $minute-height: 34px;
   left: 0;
 
   .minute {
-    background-color: grey;
+    background-color: var(--clock-face-secondary-minutes-color);
     border-radius: 5px;
   }
 
@@ -82,7 +82,7 @@ $minute-height: 34px;
   .minute-horizontal:nth-of-type(13),
   {
     height: 60px !important;
-    background-color: white !important;
+    background-color: var(--clock-face-main-minutes-color) !important;
   }
 
   $rotation-initial: 10deg;
@@ -110,7 +110,7 @@ $minute-height: 34px;
   .minute-horizontal:nth-of-type(13),
   {
     height: 60px !important;
-    background-color: white !important;
+    background-color: var(--clock-face-main-minutes-color) !important;
   }
 
   $rotation-initial: 10deg;
@@ -138,7 +138,7 @@ $minute-height: 34px;
   .minute-vertical:nth-of-type(13),
   {
     width: 60px !important;
-    background-color: white !important;
+    background-color: var(--clock-face-main-minutes-color) !important;
   }
 
   $rotation-initial: 5deg;
@@ -166,7 +166,7 @@ $minute-height: 34px;
   .minute-vertical:nth-of-type(13),
   {
     width: 60px !important;
-    background-color: white !important;
+    background-color: var(--clock-face-main-minutes-color) !important;
   }
 
   $rotation-initial: 5deg;
